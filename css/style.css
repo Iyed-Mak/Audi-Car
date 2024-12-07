@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff !important;
+    font-family: var(--title-font);
+}
+:root{
+    --black-color: #00050b;
+    --main-color: #bf404c;
+    --title-font : 'Noto Serif Georgian', serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+p{
+    font-family: var(--paragraph-font) !important;
+    font-size: .9rem;
+}
+/* Start Navigation */
+#must-head{
+    background-image: url("../img/ab782e797e9c9650b753ef01d7ba835a.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#must-head .nav-link:hover{
+    color: var(--main-color) !important;
+}
+nav{
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: moveNav 2s linear .2s  forwards;
+}
+@keyframes moveNav {
+  0%{
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  100%{
+     transform: translateY(0);
+     opacity: 1;
+   }
+}
+/* end Navigation */
+/* Start header */
+header{
+    height: calc(100vh - 98px);
+    display: flex;
+    align-items: end;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: moveHead 2s linear .2s  forwards;
+}
+@keyframes moveHead {
+  0%{
+      transform: translateY(-50%);
+  }
+  50%{
+      transform: translateY(-25%);
+      opacity: 0;
+  }
+  100%{
+     transform: translateY(0);
+     opacity: 1;
+   }
+}
+header .box{
+    height: 362px;
+}
+header .box h1{
+    font-size: 6rem;
+}
+header .box p{
+    width: 453px;
+}
+header .box p span{
+    color: var(--main-color) !important;
+}
+@media screen and (max-width: 768px) {
+    header .box h1{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    header .box h1{
+        font-size: 2.5rem;
+    }
+    header .box p{
+        width: 100%;
+    }
+}
+
+/* end header */
+/* start advantages */
+#advantages{
+    min-height: 60vh;
+    background-color: var(--black-color);
+    display: flex;
+    align-items: end;
+}
+/* #advantages .Ad{
+  transform: translateX(100%);
+} */
+@keyframes moveAdv {
+  0%{
+    transform: translateX(200%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+#advantages div .Ad::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 70%;
+    width: .5rem;
+    background-color: var(--main-color);
+}
+#advantages div .Ad p{
+    width: 600px;
+}
+@media screen and (max-width: 768px) {
+    #advantages div .Ad p{
+        width: 90%;
+    }
+    
+}
+#advantages div img{
+    width: 64px;
+    height: 64px;
+}
+
+
+/* end advantages */
+/* Start photo */
+#photo{
+    height: fit-content;
+    overflow: hidden;
+    background-color: var(--black-color);
+}
+#photo a,
+#coupe a{
+    color: var(--main-color) !important;
+    text-decoration: none;
+    border-bottom: 3px solid var(--main-color);
+    width: fit-content;
+    font-size: .9rem;
+}
+#photo .img{
+    background-image: url("../img/f87626a7d314086bcea028f7bd4c3626.jpeg");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+    #photo .img{
+        height: 50vh;
+        background-size: 170% 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    #photo .img{
+        height: 50vh;
+        background-size: 200% 100%;
+    }
+}
+/* end photo */
+/* start features */
+#features{
+    min-height: 100vh;
+    padding-top: 10vh;
+    background-image: url("../img/580eb2ca10b3a07710558f6d61c5d677.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+#features .container > img{
+    position: absolute;
+    top: 0;
+    opacity: .1;
+    z-index: 1;
+    width: 80%;
+}
+#features .container div img{
+    width: 64px;
+    height: 64px;
+}
+/* end features */
+/* Start Power */
+#power{
+    min-height: 30vh;
+    background: var(--black-color);
+    display: flex;
+    align-items: center;
+}
+#power h5{
+    font-size: 4rem;
+}
+#power img{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+}
+/* end Power */
+/* Start Virtual  */
+#Virtual {
+    min-height: 60vh;
+    background-image: url("../img/96011bd2e51df531de8c1656f76e448b.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+/* end Virtual  */
+
+#coupe{
+    min-height: 60vh;
+    background-image: url("../img/b528e809cfc9d34e334581fa2a94329e.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
